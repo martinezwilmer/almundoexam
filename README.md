@@ -22,6 +22,7 @@ Ejecutar "mongod" para ejecutar el servicio de la base de datos Mongo.
 Ejecutar dentro de la carpeta Server "npm run start".
 
 ### Cliente:
+Ejecutar npm install para la instalación de dependencias
 Ejecutar dentro de la carpeta Client "ng serve".
 
 # Entornos
