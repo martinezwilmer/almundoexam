@@ -3,11 +3,11 @@ Exámen técnico para aspirantes a desarrollador Frontend en Almundo.
 
 # Herramientas usadas
 
-###Front:
+### Front:
 - Angular 4.2.2
 - angular-cli 1.4.9
 
-###Back:
+### Back:
 - nodejs 7.7.1
 - mongo db 3.2.9
 
@@ -17,15 +17,15 @@ Exámen técnico para aspirantes a desarrollador Frontend en Almundo.
 - Client/dist: Aplicación compilada con los recursos minificados, ofuscados, etc.
 
 # Instrucciones de ejecución
-###Servidor:
+### Servidor:
 Ejecutar "mongod" para ejecutar el servicio de la base de datos Mongo.
 Ejecutar dentro de la carpeta Server "npm run start".
 
-###Cliente:
+### Cliente:
 Ejecutar dentro de la carpeta Client "ng serve".
 
 # Entornos
-###Servidor:
+### Servidor:
 En el archivo config.js hay las siguientes opciones:
   - environment: Para configurar el entorno (production / development).
   - useDataBase: Para definirle al servidor si utilizará los datos del archivo "data.json" o si utiliza la base de datos en Mongo (Debe estar el servicio de Mongo ejecutándose).
