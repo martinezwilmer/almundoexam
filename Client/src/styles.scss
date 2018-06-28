@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0px;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+}
+
+/* elements */
+/* Buttons */
+%button {
+    border-radius: 4px;
+    background-color: rgb(0,41,121);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 100%;
+    cursor: pointer;
+}
+
+.button-filter {
+    @extend %button;
+    width: 75px;
+    height: 30px;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+ 
+.button-preview {
+    @extend %button;
+    width: 180px;
+    height: 35px;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    @media only screen and (max-width: 411px){        
+            width: 300px;
+            height: 45px;
+            font-size: 1.6em;        
+    }
+    
+}
+
+/*Stars*/
+%star{
+    fill: rgb(254, 187, 3);
+}
+
+.star-large {
+    @extend %star;
+    width: 18px;
+    height: 18px;
+}
+
+.star-small {
+    @extend %star;
+    width: 14px;
+    height: 14px;
+}
+
+/*amenities*/
+.amenityIcon {
+    fill: gray;
+    width: 25px;
+    height: 25px;
+}
+
+/*General styles*/
+.fontTitleStyle {
+    color: #157ab1;
+    font-weight: bold;
+}
+
+.search-icon {
+    fill: #157ab1;
+}
+
+.star-healine {
+    font-weight: bold;
+}
+
+.no-data-found {
+    font-size: 2.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

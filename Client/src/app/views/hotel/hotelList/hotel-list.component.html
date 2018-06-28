@@ -1,0 +1,37 @@
+<div class="grid-container">
+        
+    <div class="header">
+        <div class="logo"></div>
+    </div>
+    <div class="filterContainer">
+        <div (click)="collapseFilter()">
+            <span class="fontTitleStyle">Filtrar</span>
+            <img src="/assets/icons/filters/arrow_drop_up-24px.svg" alt="">
+        </div>        
+        <hotel-filter *ngIf="!filterCollapsed" 
+            (onFilter)="getHotelByName($event)" 
+            (onFilterStars) = "getHotelByStars($event)"
+            (onClearFilter)="clearFilter()"> </hotel-filter>
+    </div> 
+    <div class="left-container">
+        <hotel-filter 
+            (onFilter)="getHotelByName($event)" 
+            (onFilterStars) = "getHotelByStars($event)"
+            (onClearFilter)="clearFilter()"> </hotel-filter>
+    </div>
+    <div class="right-container">
+        <ng-container *ngIf="hotels?.length>0;else nodata">
+            <hotel-card *ngFor="let hotel of hotels"
+                [photo]="hotel.image" 
+                [title]="hotel.name" 
+                [stars]="hotel.stars" 
+                [price]="hotel.price"
+                [amenities]="hotel.amenities" >
+            </hotel-card>
+        </ng-container>       
+
+        <ng-template class="right-container" #nodata>
+            <div class="no-data-found">NO DATA FOUND</div>
+        </ng-template>
+    </div>
+</div>

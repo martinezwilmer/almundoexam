@@ -1,0 +1,44 @@
+<div class="filter">
+    <div class="filter__header">
+        Filtros
+    </div>
+    <div class="filter__content">
+        <div class="filterHeaderText">
+            <span> 
+                <svg class="star-large search-icon">
+                    <use xlink:href="./assets/icons/filters/search.svg#Layer_1"></use>
+                </svg>
+            </span>
+            <span class="fontTitleStyle">Nombre de hotel</span>
+            <img src="/assets/icons/filters/arrow_drop_up-24px.svg" alt="">
+        </div>
+        <div class="filter__content__text">
+            <input type="text" name="" id="" #hotelFilter>
+            <div class="button-filter" (click)="filter(hotelFilter.value)">Aceptar</div>
+        </div>
+        <div class="filter__button-clear" *ngIf="filtered">
+            <div class="button-filter" (click)="clearFilter()">Limpiar</div>
+        </div>
+    </div>
+    <div class="filter__stars">
+        <div class="filterHeaderText">
+            <span>
+                <svg class="star-large search-icon">
+                    <use xlink:href="./assets/icons/filters/star.svg#Layer_1"></use>
+                </svg>
+            </span>
+            <span class="fontTitleStyle">Estrellas</span>
+            <img src="/assets/icons/filters/arrow_drop_up-24px.svg" alt="">
+        </div>
+        <div class="starsRates">
+            <div class="star-healine">
+                <input type="checkbox" #chkAllStars (change)="starSelected(0, $event)"> Todas las estrellas
+            </div>
+            <div *ngFor="let rate of [5,4,3,2,1]">
+                <input type="checkbox" #cbx (change)="starSelected(rate, $event)"> <hotel-rate [rate]="rate" [starSize]="small"></hotel-rate>  
+            </div>
+        </div>
+        
+    </div>
+</div>
+

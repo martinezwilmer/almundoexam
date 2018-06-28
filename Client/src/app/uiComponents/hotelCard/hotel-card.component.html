@@ -1,0 +1,24 @@
+<div class="card-container">
+    <div class="card-img">
+        <img src="{{photoPath + photo}}" alt="">
+    </div>
+
+    <div class="card-details">
+        <div class="card-details__tiltle fontTitleStyle">
+            <h3> {{ title }} </h3>
+        </div>
+        <div><hotel-rate [rate]="stars"></hotel-rate> </div>
+        <div><hotel-amenities [amenities] = "amenities" > </hotel-amenities> </div>
+    </div>
+    
+    <div class="card-price">
+        <div class="card-price__content">
+            <div>Precio por noche por habitación</div>
+            <div class="price">
+                <div class="currency">ARS</div>  {{price}}
+            </div>
+            <div class="button-preview">Ver Hotel</div>
+        </div>
+        
+    </div>
+</div>

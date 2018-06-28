@@ -1,0 +1,4 @@
+<!-- <svg *ngFor="let star of hotelStars" [ngClass]="{'star-large': starSize == 'large','star-small': starSize != 'large'}"> -->
+<svg *ngFor="let star of hotelStars" [ngClass]="(starSize=='large') ? 'star-large' : 'star-small'">    
+    <use xlink:href="./assets/icons/filters/star.svg#Layer_1"></use>
+</svg>
